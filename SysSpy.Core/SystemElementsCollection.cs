@@ -5,7 +5,8 @@ using System.Text;
 
 namespace SysSpy.Core
 {
-    public class Class1
+    public class SystemElementsCollection<T>
     {
+
     }
 }

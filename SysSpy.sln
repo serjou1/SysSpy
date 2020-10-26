@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SysSpy", "SysSpy\SysSpy.csproj", "{8E4DBBB9-3A95-41CE-B31D-E6982446102B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SysSpy.Desktop", "SysSpy.Desktop\SysSpy.Desktop.csproj", "{2046C6D4-0E6F-4EBB-A8E6-63173DF93870}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SysSpy.Core", "SysSpy.Core\SysSpy.Core.csproj", "{8B64866A-3890-4D37-BFAD-67054BBD1342}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8E4DBBB9-3A95-41CE-B31D-E6982446102B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8E4DBBB9-3A95-41CE-B31D-E6982446102B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8E4DBBB9-3A95-41CE-B31D-E6982446102B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8E4DBBB9-3A95-41CE-B31D-E6982446102B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2046C6D4-0E6F-4EBB-A8E6-63173DF93870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2046C6D4-0E6F-4EBB-A8E6-63173DF93870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2046C6D4-0E6F-4EBB-A8E6-63173DF93870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2046C6D4-0E6F-4EBB-A8E6-63173DF93870}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B64866A-3890-4D37-BFAD-67054BBD1342}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B64866A-3890-4D37-BFAD-67054BBD1342}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B64866A-3890-4D37-BFAD-67054BBD1342}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B64866A-3890-4D37-BFAD-67054BBD1342}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
