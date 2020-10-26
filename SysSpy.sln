@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SysSpy", "SysSpy\SysSpy.csproj", "{8E4DBBB9-3A95-41CE-B31D-E6982446102B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E4DBBB9-3A95-41CE-B31D-E6982446102B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E4DBBB9-3A95-41CE-B31D-E6982446102B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E4DBBB9-3A95-41CE-B31D-E6982446102B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E4DBBB9-3A95-41CE-B31D-E6982446102B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF36929C-723F-46C0-8661-D86586590B15}
+	EndGlobalSection
+EndGlobal
