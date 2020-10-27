@@ -6,7 +6,7 @@ namespace SysSpy.Core.SystemElements
     /// <summary>
     /// Describes X509 certificate.
     /// </summary>
-    class Certificate
+    public class Certificate : SystemElement
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Certificate"/> class.
