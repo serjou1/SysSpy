@@ -6,7 +6,7 @@ using SysSpy.Core.SystemElements;
 
 namespace SysSpy.Core.Collectors
 {
-    public class CertificatesCollector : ISystemElementsCollector<Certificate>
+    public class CertificatesCollector : ISystemElementsCollector//<Certificate>
     {
         public SystemElementsCollection<Certificate> Collect()
         {
@@ -41,5 +41,8 @@ namespace SysSpy.Core.Collectors
 
             return collection;
         }
+
+        SystemElementsCollection<SystemElement> ISystemElementsCollector.Collect()
+            => Collect().
     }
 }

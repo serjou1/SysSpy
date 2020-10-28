@@ -22,7 +22,7 @@ namespace SysSpy.Snapshots
 
         public string Name { get; }
 
-        public List<ISystemElementsCollection> Collectors { get; }
+        public List<SystemElementsCollection> Collectors { get; }
 
         public static void RegisterType<T>() where T : SystemElement => registeredTypes.Add(typeof(T));
 
