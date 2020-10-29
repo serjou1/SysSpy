@@ -1,39 +1,25 @@
-﻿using SysSpy.Core;
-using SysSpy.Core.Collectors;
-using SysSpy.Core.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
+using SysSpy.Models;
+using SysSpy.Models.Interfaces;
 
 namespace SysSpy.Snapshots
 {
     public class SnapshotsFactory
     {
-        //private readonly List<ISystemElementsCollector>
+        private readonly List<ISystemElementsCollector> _collectors;
 
-        private readonly CertificatesCollector _certificatesCollector;
-
-        public SnapshotsFactory(params ISystemElementsCollector[] systemElementsCollectors)
+        public SnapshotsFactory(List<ISystemElementsCollector> collectors)
         {
-
+            _collectors = collectors;
         }
 
         public Snapshot TakeSnapshot(string name)
         {
+            var collections = new List<SystemElementsCollection>();
+            foreach (var collector in _collectors)
+                collections.Add(collector.Collect());
 
-        }
-    }
-
-    class Prog
-    {
-        static void Main()
-        {
-            var factory = new SnapshotsFactory(
-                new CertificatesCollector(),
-                new );
-
-            var initial = factory.TakeSnapshot("initial");
+            return new Snapshot(name, collections);
         }
     }
 }

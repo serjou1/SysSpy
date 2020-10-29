@@ -1,4 +1,4 @@
-﻿namespace SysSpy.Core.Enums
+﻿namespace SysSpy.Models.Enums
 {
     /// <summary>
     /// "User's" and "Machine's" hives of element.

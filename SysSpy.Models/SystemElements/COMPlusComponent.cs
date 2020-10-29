@@ -1,9 +1,9 @@
-﻿namespace SysSpy.Core.SystemElements
+﻿namespace SysSpy.Models.SystemElements
 {
     /// <summary>
     /// Describes COM+ component.
     /// </summary>
-    class COMPlusComponent
+    public class COMPlusComponent : SystemElement
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="COMPlusComponent"/> class.

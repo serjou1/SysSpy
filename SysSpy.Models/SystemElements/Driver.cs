@@ -1,11 +1,11 @@
 ﻿using System.Management;
 
-namespace SysSpy.Core.SystemElements
+namespace SysSpy.Models.SystemElements
 {
     /// <summary>
     /// Describes driver.
     /// </summary>
-    class Driver
+    public class Driver : SystemElement
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Driver"/> class.

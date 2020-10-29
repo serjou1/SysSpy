@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography.X509Certificates;
-using SysSpy.Core.Enums;
+using SysSpy.Models.Enums;
 
-namespace SysSpy.Core.SystemElements
+namespace SysSpy.Models.SystemElements
 {
     /// <summary>
     /// Describes X509 certificate.

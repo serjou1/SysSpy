@@ -39,14 +39,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CollectorsRegistrar.cs" />
+    <Compile Include="Exceptions\CollectorRegistrationException.cs" />
     <Compile Include="Snapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SnapshotsComparator.cs" />
     <Compile Include="SnapshotsFactory.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SysSpy.Core\SysSpy.Core.csproj">
+    <ProjectReference Include="..\SysSpy.Models\SysSpy.Models.csproj">
       <Project>{8b64866a-3890-4d37-bfad-67054bbd1342}</Project>
-      <Name>SysSpy.Core</Name>
+      <Name>SysSpy.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

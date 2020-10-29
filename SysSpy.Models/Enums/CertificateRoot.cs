@@ -1,4 +1,4 @@
-﻿namespace SysSpy.Core.Enums
+﻿namespace SysSpy.Models.Enums
 {
     /// <summary>
     /// Lists all X509 certificate roots.

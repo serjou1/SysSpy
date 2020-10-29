@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Security.Cryptography.X509Certificates;
-using SysSpy.Core.Enums;
-using SysSpy.Core.Interfaces;
-using SysSpy.Core.SystemElements;
+using SysSpy.Models.Enums;
+using SysSpy.Models.Interfaces;
+using SysSpy.Models.SystemElements;
 
-namespace SysSpy.Core.Collectors
+namespace SysSpy.Models.Collectors
 {
-    public class CertificatesCollector : ISystemElementsCollector//<Certificate>
+    public class CertificatesCollector : ISystemElementsCollector
     {
-        public SystemElementsCollection<Certificate> Collect()
+        public SystemElementsCollection Collect()
         {
-            var collection = new SystemElementsCollection<Certificate>();
+            var collection = new SystemElementsCollection("Certificates");
 
             foreach (CertificateRoot root in Enum.GetValues(typeof(CertificateRoot)))
             {
@@ -41,8 +41,5 @@ namespace SysSpy.Core.Collectors
 
             return collection;
         }
-
-        SystemElementsCollection<SystemElement> ISystemElementsCollector.Collect()
-            => Collect().
     }
 }
