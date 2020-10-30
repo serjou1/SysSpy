@@ -42,5 +42,15 @@
     <Compile Include="Scanner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SysSpy.Models\SysSpy.Models.csproj">
+      <Project>{8B64866A-3890-4D37-BFAD-67054BBD1342}</Project>
+      <Name>SysSpy.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SysSpy.Snapshots\SysSpy.Snapshots.csproj">
+      <Project>{05FA21CC-1F82-4979-8161-1CA9B8B909AE}</Project>
+      <Name>SysSpy.Snapshots</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
