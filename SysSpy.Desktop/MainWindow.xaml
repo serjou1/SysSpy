@@ -4,9 +4,82 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SysSpy.Desktop"
+        xmlns:viewModel="clr-namespace:SysSpy.Desktop.ViewModels"
+        xmlns:controls="clr-namespace:SysSpy.Desktop.Controls"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+
+    <Window.Resources>
+        <viewModel:MainViewModel x:Key="viewModelSource"/>
+    </Window.Resources>
+
+    <Window.DataContext>
+        <Binding Source="{StaticResource viewModelSource}"/>
+    </Window.DataContext>
+
+    <DockPanel LastChildFill="True">
+        <Menu>
+            
+        </Menu>
         
-    </Grid>
+        <Grid Height="40" DockPanel.Dock="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel
+                Orientation="Horizontal"
+                HorizontalAlignment="Left"
+                Margin="10,0,0,0">
+                <controls:ScanningControlElements/>
+                <Separator Style="{StaticResource ResourceKey=VerticalSeparatorStyle}"/>
+                <controls:TakeSnapshotElements/>
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                HorizontalAlignment="Right"
+                Grid.Column="1">
+                <Label
+                    Content="Show"
+                    VerticalAlignment="Center"/>
+                <ComboBox x:Name="ShownItemsCB" SelectedIndex="{Binding ComboBoxSelectedIndex, Mode=TwoWay}"
+                      VerticalAlignment="Center"
+                      Width="120"
+                      Margin="5">
+                    <TextBlock>All Items</TextBlock>
+                    <TextBlock>New Items</TextBlock>
+                    <TextBlock>Changed Items</TextBlock>
+                    <TextBlock>Deleted Items</TextBlock>
+                </ComboBox>
+            </StackPanel>
+        </Grid>
+
+        <Grid>
+            <TabControl ItemsSource="{Binding Test}">
+                <TabControl.ItemTemplate>
+                    <DataTemplate DataType="viewModel:ElementsInfoViewModel">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Text}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </TabControl.ItemTemplate>
+                <TabControl.ContentTemplate>
+                    <DataTemplate DataType="viewModel:ElementsInfoViewModel">
+                        <TextBlock Text="{Binding Content}"/>
+                    </DataTemplate>
+                </TabControl.ContentTemplate>
+                <!--<TabItem Header="test">
+                    <TabItem.Content>
+                        <Grid/>
+                    </TabItem.Content>
+                </TabItem>
+                <TabItem Header="test" HorizontalAlignment="Right" DockPanel.Dock="Right">
+                    <TabItem.Content>
+                        <Grid/>
+                    </TabItem.Content>
+                </TabItem>-->
+            </TabControl>
+            
+        </Grid>
+    </DockPanel>
 </Window>

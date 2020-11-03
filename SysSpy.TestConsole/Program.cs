@@ -1,4 +1,4 @@
-﻿using SysSpy.Core;
+﻿//using SysSpy.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,17 +10,17 @@ namespace SysSpy.TestConsole
     {
         static void Main(string[] args)
         {
-            var scn = new Scanner();
+            //    var scn = new Scanner();
 
-            while (true)
-            {
+            //    while (true)
+            //    {
 
-                var answer = Console.ReadLine();
-                if (answer == "start")
-                    scn.StartScan();
-                if (answer == "stop")
-                    scn.StopScan();
-            }
+            //        var answer = Console.ReadLine();
+            //        if (answer == "start")
+            //            scn.StartScan();
+            //        if (answer == "stop")
+            //            scn.StopScan();
+        //}
         }
     }
 }

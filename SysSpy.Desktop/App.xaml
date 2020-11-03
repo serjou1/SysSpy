@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:SysSpy.Desktop"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Button.xaml"/>
+                <ResourceDictionary Source="Styles/Separator.xaml"/>
+                <ResourceDictionary Source="Styles/TabControl.xaml"/>
+                <ResourceDictionary Source="Styles/UserControl.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

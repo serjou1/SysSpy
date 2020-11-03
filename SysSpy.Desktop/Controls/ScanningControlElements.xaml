@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="SysSpy.Desktop.Controls.ScanningControlElements"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SysSpy.Desktop.Controls"
+             mc:Ignorable="d" 
+             Style="{StaticResource ResourceKey=TopPanelUserControlStyle}">
+    <StackPanel Orientation="Horizontal">
+        <Button x:Name="StartStopButton"
+                        Command="{Binding StartStop}"
+                        Style="{StaticResource ResourceKey=ControlButtonStyle}">
+            <DockPanel>
+                <!--<Image Source="{Binding Scan, Converter={StaticResource startStopImageConverter}}"/>-->
+            </DockPanel>
+        </Button>
+        <Label Content="Update Interval" VerticalAlignment="Center"/>
+        <TextBox Text="{Binding Period, Mode=TwoWay}"
+                         Height="20" Width="30"/>
+        <Label Content="ms" VerticalAlignment="Center"/>
+    </StackPanel>
+</UserControl>
