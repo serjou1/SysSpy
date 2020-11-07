@@ -58,14 +58,13 @@
             <TabControl ItemsSource="{Binding Test}">
                 <TabControl.ItemTemplate>
                     <DataTemplate DataType="viewModel:ElementsInfoViewModel">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="{Binding Text}"/>
-                        </StackPanel>
+                        <controls:ElementsInfoTabItemHeader/>
                     </DataTemplate>
                 </TabControl.ItemTemplate>
                 <TabControl.ContentTemplate>
                     <DataTemplate DataType="viewModel:ElementsInfoViewModel">
-                        <TextBlock Text="{Binding Content}"/>
+                        <controls:ElementsInfoTabItemContent/>
+                        <!--<TextBlock Text="{Binding Content}"/>-->
                     </DataTemplate>
                 </TabControl.ContentTemplate>
                 <!--<TabItem Header="test">

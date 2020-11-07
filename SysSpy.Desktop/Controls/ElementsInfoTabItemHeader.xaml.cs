@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace SysSpy.Desktop.Controls
 {
     /// <summary>
-    /// Interaction logic for ElementsInfoTabItem.xaml
+    /// Interaction logic for ElementsInfoTabItemHeader.xaml
     /// </summary>
-    public partial class ElementsInfoTabItem : TabItem
+    public partial class ElementsInfoTabItemHeader : UserControl
     {
-        public ElementsInfoTabItem()
+        public ElementsInfoTabItemHeader()
         {
             InitializeComponent();
         }

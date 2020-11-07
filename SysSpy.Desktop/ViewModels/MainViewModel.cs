@@ -4,16 +4,25 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using SysSpy.Models.Collectors;
+using SysSpy.Scanning;
 
 namespace SysSpy.Desktop.ViewModels
 {
-    public class MainViewModel : INotifyPropertyChanged
+    internal class MainViewModel : INotifyPropertyChanged
     {
         public MainViewModel()
         {
             Test = new ObservableCollection<ElementsInfoViewModel>();
-            Test.Add(new ElementsInfoViewModel());
-            Test.Add(new ElementsInfoViewModel());
+
+            var certificatesCollector = new CertificatesCollector();
+            var certificatesScaner = new ElementScaner(certificatesCollector, "Certificates");
+            certificatesScaner.Scan();
+            var certifVM = new ElementsInfoViewModel(certificatesScaner);
+
+            Test.Add(certifVM);
+            //Test.Add(new ElementsInfoViewModel());
+            //Test.Add(new ElementsInfoViewModel());
         }
 
         public ObservableCollection<ElementsInfoViewModel> Test { get; set; }

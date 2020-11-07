@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using SysSpy.Models;
 using SysSpy.Models.Interfaces;
+using SysSpy.Models.SystemElements;
 
 namespace SysSpy.Scanning
 {
@@ -23,18 +25,45 @@ namespace SysSpy.Scanning
             _addedElements = new SystemElementsCollection(name);
             _removedElements = new SystemElementsCollection(name);
 
+            Name = name;
+
             GetInitialCollection();
         }
+
+        public event EventHandler ElementsUpdated;
+        public event EventHandler AddedElementsFound;
+        public event EventHandler ChangedElementsFound;
+        public event EventHandler RemovedElementsFound;
+
+        public ReadOnlyCollection<SystemElement> Elements => _elements.AsReadOnly();
+
+        public string Name { get; }
 
         public void Scan()
         {
             var currentElements = _collector.Collect();
 
-            var added = currentElements.Except(_elements);
-            _addedElements.AddRange(added);
+            var added = currentElements.Except(_elements).ToList();
+            var addedCount = added.Count;
+            if (addedCount > 0)
+            {
+                _addedElements.AddRange(added);
+                AddedElementsFound?.Invoke(this, null);
+            }
 
-            var removed = _elements.Except(currentElements);
-            _removedElements.AddRange(removed);
+            var removed = _elements.Except(currentElements).ToList();
+            var removedCount = removed.Count;
+            if (removedCount > 0)
+            {
+                _removedElements.AddRange(removed);
+                RemovedElementsFound?.Invoke(this, null);
+            }
+
+            if (addedCount > 0 || removedCount > 0)
+            {
+                _elements = currentElements;
+                ElementsUpdated?.Invoke(this, null);
+            }
         }
 
         private void GetInitialCollection()

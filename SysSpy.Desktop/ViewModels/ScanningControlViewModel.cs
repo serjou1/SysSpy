@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SysSpy.Desktop.ViewModels
 {
-    public class ScanningControlViewModel
+    internal class ScanningControlViewModel
     {
     }
 }
