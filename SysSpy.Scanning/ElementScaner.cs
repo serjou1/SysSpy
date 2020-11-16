@@ -9,6 +9,7 @@ using SysSpy.Models.SystemElements;
 
 namespace SysSpy.Scanning
 {
+    // todo add comments
     public class ElementScaner
     {
         private readonly ISystemElementsCollector _collector;

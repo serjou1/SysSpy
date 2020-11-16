@@ -5,6 +5,7 @@ using SysSpy.Models.SystemElements;
 
 namespace SysSpy.Models.Collectors
 {
+    // todo add comments
     public class StartupProgramsCollector : ISystemElementsCollector
     {
         public SystemElementsCollection Collect()

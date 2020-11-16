@@ -6,6 +6,7 @@ using SysSpy.Models.SystemElements;
 
 namespace SysSpy.Models.Collectors
 {
+    // todo add comments
     public class EnvironmentVariablesCollector : ISystemElementsCollector
     {
         public SystemElementsCollection Collect()

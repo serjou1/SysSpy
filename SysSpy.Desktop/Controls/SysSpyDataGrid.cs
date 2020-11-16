@@ -8,6 +8,7 @@ using System.Windows.Data;
 
 namespace SysSpy.Desktop.Controls
 {
+    // todo add comments
     internal class SysSpyDataGrid : DataGrid
     {
         public SysSpyDataGrid() : base()

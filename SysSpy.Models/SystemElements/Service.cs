@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using SysSpy.Models.Attributes;
 
 namespace SysSpy.Models.SystemElements
 {
     /// <summary>
     /// Describes Windows service.
     /// </summary>
+    [CollectionName("Services")]
     public class Service : SystemElement
     {
         /// <summary>

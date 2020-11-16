@@ -7,6 +7,7 @@ using System.Text;
 
 namespace SysSpy.Snapshots
 {
+    // todo add comments
     public class SnapshotsComparator
     {
         public void CompareSnapshots(

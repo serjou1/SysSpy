@@ -2,6 +2,7 @@
 
 namespace SysSpy.Models.Attributes
 {
+    // todo add comments
     public class CollectionNameAttribute : Attribute
     {
         public CollectionNameAttribute(string collectionName)

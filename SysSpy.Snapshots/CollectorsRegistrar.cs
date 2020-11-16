@@ -8,6 +8,7 @@ using SysSpy.Snapshots.Exceptions;
 
 namespace SysSpy.Snapshots
 {
+    // todo add comments
     public class CollectorsRegistrar
     {
         public readonly Dictionary<Type, ISystemElementsCollector> _typesAndCollectors;

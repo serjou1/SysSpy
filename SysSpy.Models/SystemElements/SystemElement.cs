@@ -5,6 +5,7 @@ using System.Text;
 
 namespace SysSpy.Models.SystemElements
 {
+    // todo add comments
     public class SystemElement
     {
     }

@@ -4,6 +4,7 @@ using SysSpy.Models.SystemElements;
 
 namespace SysSpy.Models.Collectors
 {
+    // todo add comments
     public class DriversCollector : ISystemElementsCollector
     {
         public SystemElementsCollection Collect()

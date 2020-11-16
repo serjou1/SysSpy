@@ -6,6 +6,7 @@ using System.Timers;
 
 namespace SysSpy.Scanning
 {
+    // todo add comments
     public class ElementsScanningHandler
     {
         private readonly Timer _scanExecutor;

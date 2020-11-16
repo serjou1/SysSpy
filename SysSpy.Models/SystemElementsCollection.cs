@@ -4,6 +4,7 @@ using SysSpy.Models.SystemElements;
 
 namespace SysSpy.Models
 {
+    // todo add comments
     public class SystemElementsCollection : List<SystemElement>
     {
         //private readonly Type _type;

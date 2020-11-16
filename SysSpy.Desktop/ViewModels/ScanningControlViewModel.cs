@@ -5,6 +5,7 @@ using System.Text;
 
 namespace SysSpy.Desktop.ViewModels
 {
+    // todo add comments
     internal class ScanningControlViewModel
     {
     }

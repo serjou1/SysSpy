@@ -4,6 +4,7 @@ using SysSpy.Models.Interfaces;
 
 namespace SysSpy.Snapshots
 {
+    // todo add comments
     public class SnapshotsFactory
     {
         private readonly List<ISystemElementsCollector> _collectors;

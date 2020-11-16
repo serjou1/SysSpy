@@ -3,6 +3,7 @@ using SysSpy.Models;
 
 namespace SysSpy.Snapshots
 {
+    // todo add comments
     public class Snapshot
     {
         public Snapshot(string name, List<SystemElementsCollection> collections)

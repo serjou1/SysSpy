@@ -9,6 +9,7 @@ using SysSpy.Scanning;
 
 namespace SysSpy.Desktop.ViewModels
 {
+    // todo add comments
     internal class ElementsInfoViewModel : INotifyPropertyChanged
     {
         private readonly ElementScaner _elementScaner;

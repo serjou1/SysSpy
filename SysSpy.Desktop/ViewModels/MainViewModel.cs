@@ -10,6 +10,7 @@ using SysSpy.Models.SystemElements;
 using SysSpy.Scanning;
 using SysSpy.Snapshots;
 
+// todo add comments
 namespace SysSpy.Desktop.ViewModels
 {
     internal class MainViewModel : INotifyPropertyChanged
