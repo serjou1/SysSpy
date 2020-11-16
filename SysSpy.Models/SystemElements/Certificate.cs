@@ -34,7 +34,7 @@ namespace SysSpy.Models.SystemElements
         /// <summary>
         /// "User's" or "Machine's" certificate's hive.
         /// </summary>
-        public ElementsHive Hive { get; set; }
+        public Hive Hive { get; set; }
 
         /// <summary>
         /// Certificate's subject.

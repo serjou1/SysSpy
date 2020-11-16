@@ -2,18 +2,10 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:toolkit="http://schemas.microsoft.com/wpf/2008/toolkit"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:SysSpy.Desktop.Controls"
              mc:Ignorable="d">
     <Grid>
-        <toolkit:DataGrid ItemsSource="{Binding ShownElements}">
-            <!--<toolkit:DataGrid.Columns>
-                <toolkit:DataGridTextColumn Header="Friendly Name" Binding="{Binding Path=FriendlyName, Mode=OneWay}"/>
-                <toolkit:DataGridTextColumn Header="Issuer" Binding="{Binding Path=Issuer, Mode=OneWay}"/>
-                <toolkit:DataGridTextColumn Header="Subject" Binding="{Binding Path=Subject, Mode=OneWay}"/>
-                <toolkit:DataGridTextColumn Header="Root" Binding="{Binding Path=Root, Mode=OneWay}"/>
-            </toolkit:DataGrid.Columns>-->
-        </toolkit:DataGrid>
+        <local:SysSpyDataGrid ItemsSource="{Binding Path=ShownElements, Mode=OneWay}" IsReadOnly="True"/>
     </Grid>
 </UserControl>

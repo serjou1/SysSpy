@@ -19,7 +19,7 @@ namespace SysSpy.Models.Collectors
                 {
                     store.Open(OpenFlags.ReadOnly);
                     foreach (X509Certificate2 mCert in store.Certificates)
-                        collection.Add(new Certificate(root, mCert) { Hive = ElementsHive.Users });
+                        collection.Add(new Certificate(root, mCert) { Hive = Hive.Users });
                 }
                 finally
                 {
@@ -31,7 +31,7 @@ namespace SysSpy.Models.Collectors
                 {
                     store.Open(OpenFlags.ReadOnly);
                     foreach (X509Certificate2 mCert in store.Certificates)
-                        collection.Add(new Certificate(root, mCert) { Hive = ElementsHive.Machines });
+                        collection.Add(new Certificate(root, mCert) { Hive = Hive.Machines });
                 }
                 finally
                 {

@@ -61,6 +61,7 @@
     <Compile Include="Controls\ScanningControlElements.xaml.cs">
       <DependentUpon>ScanningControlElements.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\SysSpyDataGrid.cs" />
     <Compile Include="Controls\TakeSnapshotElements.xaml.cs">
       <DependentUpon>TakeSnapshotElements.xaml</DependentUpon>
     </Compile>
