@@ -55,7 +55,7 @@
         </Grid>
 
         <Grid>
-            <TabControl ItemsSource="{Binding Test}">
+            <TabControl ItemsSource="{Binding SystemElementsTabsViewModels}">
                 <TabControl.ItemTemplate>
                     <DataTemplate DataType="viewModel:ElementsInfoViewModel">
                         <controls:ElementsInfoTabItemHeader/>

@@ -146,6 +146,10 @@
       <Project>{91CBC913-DBAC-47B4-8D2C-08054BB3E1B9}</Project>
       <Name>SysSpy.Scanning</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SysSpy.Snapshots\SysSpy.Snapshots.csproj">
+      <Project>{05FA21CC-1F82-4979-8161-1CA9B8B909AE}</Project>
+      <Name>SysSpy.Snapshots</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

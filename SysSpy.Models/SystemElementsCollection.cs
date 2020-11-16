@@ -8,14 +8,14 @@ namespace SysSpy.Models
     {
         //private readonly Type _type;
 
-        public SystemElementsCollection(string name/*, Type type*/)
+        public SystemElementsCollection(/*string name, Type type*/)
         {
-            Name = name;
+            //Name = name;
 
             //_type = type;
         }
 
-        public string Name { get; }
+        //public string Name { get; }
 
         //public new void Add(SystemElement item)
         //{

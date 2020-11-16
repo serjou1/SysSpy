@@ -10,7 +10,7 @@ namespace SysSpy.Models.Collectors
     {
         public SystemElementsCollection Collect()
         {
-            var collection = new SystemElementsCollection("Certificates");
+            var collection = new SystemElementsCollection();
 
             foreach (CertificateRoot root in Enum.GetValues(typeof(CertificateRoot)))
             {

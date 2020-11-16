@@ -19,15 +19,15 @@ namespace SysSpy.Snapshots
             removedElementsCollections = new List<SystemElementsCollection>();
             for (var i = 0; i < oldSnapshot.Collections.Count; i++)
             {
-                var name = oldSnapshot.Collections[i].Name;
+                //var name = oldSnapshot.Collections[i].Name;
 
                 var addedElementsList = oldSnapshot.Collections[i].Except(newSnapshot.Collections[i]).ToList();
-                var addedElements = new SystemElementsCollection(name);
+                var addedElements = new SystemElementsCollection(/*name*/);
                 addedElements.AddRange(addedElementsList);
                 addedElementsCollections.Add(addedElements);
 
                 var removedElementsList = newSnapshot.Collections[i].Except(oldSnapshot.Collections[i]).ToList();
-                var removedElements = new SystemElementsCollection(name);
+                var removedElements = new SystemElementsCollection(/*name*/);
                 removedElements.AddRange(removedElementsList);
                 removedElementsCollections.Add(removedElements);
             }

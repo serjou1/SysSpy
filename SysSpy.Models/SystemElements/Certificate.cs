@@ -1,4 +1,5 @@
 ﻿using System.Security.Cryptography.X509Certificates;
+using SysSpy.Models.Attributes;
 using SysSpy.Models.Enums;
 
 namespace SysSpy.Models.SystemElements
@@ -6,6 +7,7 @@ namespace SysSpy.Models.SystemElements
     /// <summary>
     /// Describes X509 certificate.
     /// </summary>
+    [CollectionName("Certificates")]
     public class Certificate : SystemElement
     {
         /// <summary>

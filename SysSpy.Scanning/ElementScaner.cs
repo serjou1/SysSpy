@@ -22,8 +22,8 @@ namespace SysSpy.Scanning
         {
             _collector = collector;
 
-            _addedElements = new SystemElementsCollection(name);
-            _removedElements = new SystemElementsCollection(name);
+            _addedElements = new SystemElementsCollection();
+            _removedElements = new SystemElementsCollection();
 
             Name = name;
 

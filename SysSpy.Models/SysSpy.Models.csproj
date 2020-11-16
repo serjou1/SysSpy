@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\CollectionNameAttribute.cs" />
     <Compile Include="Enums\CertificateRoot.cs" />
     <Compile Include="Enums\Hive.cs" />
     <Compile Include="Collectors\CertificatesCollector.cs" />
