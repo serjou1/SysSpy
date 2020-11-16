@@ -63,16 +63,20 @@ namespace SysSpy.Desktop.ViewModels
 
             foreach (var type in _collectorsRegistrar.RegisteredTypes)
             {
+                // Get tab name from attribute
                 var attrs = type.GetCustomAttributes(false);
                 string collectionName = string.Empty;
                 foreach (CollectionNameAttribute attr in attrs)
                     collectionName = attr.CollectionName;
 
+                // Get collector for element's type
                 var collector = _collectorsRegistrar.GetCollector(type);
 
+                // Register scanner fi=or the type
                 var scaner = new ElementScaner(collector, collectionName);
                 elementsScanningHandler.AddScaner(scaner);
 
+                // Create viewmodel for element's tab 
                 var tabViewModel = new ElementsInfoViewModel(scaner);
                 SystemElementsTabsViewModels.Add(tabViewModel);
             }
