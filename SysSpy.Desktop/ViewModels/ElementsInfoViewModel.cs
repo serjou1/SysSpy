@@ -67,8 +67,6 @@ namespace SysSpy.Desktop.ViewModels
 
         public ReadOnlyCollection<SystemElement> ShownElements => _elementScaner.Elements;
 
-        public string Content { get; set; } = "test content";
-
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName)
         {

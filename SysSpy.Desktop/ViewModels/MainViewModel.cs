@@ -17,7 +17,7 @@ namespace SysSpy.Desktop.ViewModels
     {
         private readonly CollectorsRegistrar _collectorsRegistrar;
 
-        private readonly ElementsScanningHandler _elementsScanningHandler;
+        //private readonly ElementsScanningHandler _elementsScanningHandler;
 
         public MainViewModel()
         {
@@ -25,16 +25,22 @@ namespace SysSpy.Desktop.ViewModels
 
             InitializeCollectorsRegistrar(out _collectorsRegistrar);
 
-            InitializeElementsScanningHandlerAndGetTabsViewModels(out _elementsScanningHandler);
+            InitializeElementsScanningHandlerAndGetTabsViewModels(out var elementsScanningHandler);
+
+            ScanningControlViewModel = new ScanningControlViewModel(elementsScanningHandler);
         }
 
         public List<ElementsInfoViewModel> SystemElementsTabsViewModels { get; }
 
+        public ScanningControlViewModel ScanningControlViewModel { get; }
+
+        #region INotifyPropertyChanged members
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+        #endregion
 
         private void InitializeCollectorsRegistrar(out CollectorsRegistrar collectorsRegistrar)
         {

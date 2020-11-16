@@ -31,7 +31,7 @@
                 Orientation="Horizontal"
                 HorizontalAlignment="Left"
                 Margin="10,0,0,0">
-                <controls:ScanningControlElements/>
+                <controls:ScanningControlElements DataContext="{Binding ScanningControlViewModel}"/>
                 <Separator Style="{StaticResource ResourceKey=VerticalSeparatorStyle}"/>
                 <controls:TakeSnapshotElements/>
             </StackPanel>
