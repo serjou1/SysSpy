@@ -2,7 +2,9 @@
 
 namespace SysSpy.Models.Attributes
 {
-    // todo add comments
+    /// <summary>
+    /// Describes name of elements collection.
+    /// </summary>
     public class CollectionNameAttribute : Attribute
     {
         public CollectionNameAttribute(string collectionName)
@@ -10,6 +12,9 @@ namespace SysSpy.Models.Attributes
             CollectionName = collectionName;
         }
 
+        /// <summary>
+        /// Name of collection.
+        /// </summary>
         public string CollectionName { get; }
     }
 }

@@ -7,6 +7,9 @@ using SysSpy.Models.SystemElements;
 namespace SysSpy.Models.Collectors
 {
     // todo add comments
+    /// <summary>
+    /// Collects all X509 certificates from machine.
+    /// </summary>
     public class CertificatesCollector : ISystemElementsCollector
     {
         public SystemElementsCollection Collect()
