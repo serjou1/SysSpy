@@ -30,5 +30,7 @@ namespace SysSpy.Models.SystemElements
         public string Value { get; }
 
         public Hive Hive { get; set; }
+
+        internal override object ID { get { return Name + Hive; } }
     }
 }

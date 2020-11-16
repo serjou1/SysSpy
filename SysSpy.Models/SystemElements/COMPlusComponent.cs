@@ -23,10 +23,11 @@ namespace SysSpy.Models.SystemElements
         /// Component's name.
         /// </summary>
         public string Name { get; }
-
         /// <summary>
         /// Application to which the component belongs.
         /// </summary>
         public string Application { get; }
+
+        internal override object ID => Name;
     }
 }

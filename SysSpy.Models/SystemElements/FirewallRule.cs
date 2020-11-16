@@ -57,5 +57,7 @@ namespace SysSpy.Models.SystemElements
         /// Rule's remote ports.
         /// </summary>
         public string RemotePorts { get; }
+
+        internal override object ID => Name;
     }
 }

@@ -42,5 +42,7 @@ namespace SysSpy.Models.SystemElements
         /// Service's status.
         /// </summary>
         public string Status { get; }
+
+        internal override object ID => ServiceName;
     }
 }

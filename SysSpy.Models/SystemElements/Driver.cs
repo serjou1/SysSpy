@@ -25,15 +25,15 @@ namespace SysSpy.Models.SystemElements
         /// Driver's display name.
         /// </summary>
         public string DisplayName { get; }
-
         /// <summary>
         /// Driver's name.
         /// </summary>
         public string Name { get; }
-
         /// <summary>
         /// Driver's state.
         /// </summary>
         public string State { get; }
+
+        internal override object ID => Name;
     }
 }

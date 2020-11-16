@@ -27,5 +27,7 @@ namespace SysSpy.Models.SystemElements
         /// Startup's location.
         /// </summary>
         public string Location { get; }
+
+        internal override object ID => Name;
     }
 }

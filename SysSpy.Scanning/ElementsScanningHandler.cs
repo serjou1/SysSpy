@@ -22,6 +22,8 @@ namespace SysSpy.Scanning
             SetScanExecutor(out _scanExecutor);
         }
 
+        public bool IsScanEnabled => _scanExecutor.Enabled;
+
         public double ScanInterval
         {
             get => _scanInterval;

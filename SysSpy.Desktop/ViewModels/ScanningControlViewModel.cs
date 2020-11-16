@@ -1,9 +1,6 @@
 ﻿using SysSpy.Scanning;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
+using System.Windows.Input;
 
 namespace SysSpy.Desktop.ViewModels
 {
@@ -17,6 +14,40 @@ namespace SysSpy.Desktop.ViewModels
             _elementsScanningHandler = elementsScanningHandler;
         }
 
+        public bool IsScanEnabled => _elementsScanningHandler.IsScanEnabled;
+
+        public ICommand SwitchScanningState
+        {
+            get
+            {
+                return new RelayCommand(_ =>
+                {
+                    if (_elementsScanningHandler.IsScanEnabled)
+                        _elementsScanningHandler.StopScan();
+                    else
+                        _elementsScanningHandler.StartScan();
+
+                    OnPropertyChanged("IsScanEnabled");
+                });
+            }
+        }
+
+        public double ScanInterval
+        {
+            get
+            {
+                return _elementsScanningHandler.ScanInterval;
+            }
+
+            set
+            {
+                if (value == _elementsScanningHandler.ScanInterval)
+                    return;
+
+                _elementsScanningHandler.ScanInterval = value;
+                OnPropertyChanged("ScanInterval");
+            }
+        }
 
         #region INotifyPropertyChanged members
         public event PropertyChangedEventHandler PropertyChanged;

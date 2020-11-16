@@ -37,6 +37,8 @@ namespace SysSpy.Scanning
         public event EventHandler RemovedElementsFound;
 
         public ReadOnlyCollection<SystemElement> Elements => _elements.AsReadOnly();
+        public ReadOnlyCollection<SystemElement> AddedElements => _addedElements.AsReadOnly();
+        public ReadOnlyCollection<SystemElement> RemovedElements => _removedElements.AsReadOnly();
 
         public string Name { get; }
 

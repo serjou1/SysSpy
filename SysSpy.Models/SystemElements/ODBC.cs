@@ -21,5 +21,7 @@ namespace SysSpy.Models.SystemElements
         /// ODBC's name.
         /// </summary>
         public string Name { get; }
+
+        internal override object ID => Name;
     }
 }

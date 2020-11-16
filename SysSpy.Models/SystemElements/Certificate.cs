@@ -27,36 +27,32 @@ namespace SysSpy.Models.SystemElements
         /// Certificate's root.
         /// </summary>
         public CertificateRoot Root { get; }
-
         /// <summary>
         /// Source certificate.
         /// </summary>
         public X509Certificate2 SourceCertificate { get; }
-
+        /// <summary>
+        /// Certificate's subject.
+        /// </summary>
+        public string Subject => SourceCertificate.Subject;
+        /// <summary>
+        /// Certificate's issuer.
+        /// </summary>
+        public string Issuer => SourceCertificate.Issuer;
+        /// <summary>
+        /// Certificate's friendly name.
+        /// </summary>
+        public string FriendlyName => SourceCertificate.FriendlyName;
+        /// <summary>
+        /// To whom the certificate was issued.
+        /// </summary>
+        public string IssuedTo { get; }
         /// <summary>
         /// "User's" or "Machine's" certificate's hive.
         /// </summary>
         public Hive Hive { get; set; }
 
-        /// <summary>
-        /// Certificate's subject.
-        /// </summary>
-        public string Subject => SourceCertificate.Subject;
-
-        /// <summary>
-        /// Certificate's issuer.
-        /// </summary>
-        public string Issuer => SourceCertificate.Issuer;
-
-        /// <summary>
-        /// Certificate's friendly name.
-        /// </summary>
-        public string FriendlyName => SourceCertificate.FriendlyName;
-
-        /// <summary>
-        /// To whom the certificate was issued.
-        /// </summary>
-        public string IssuedTo { get; }
+        internal override object ID { get { return Root + Subject + Issuer + FriendlyName + Hive; } }
 
         private string GetIssuedTo()
         {
