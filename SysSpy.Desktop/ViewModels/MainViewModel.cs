@@ -41,6 +41,19 @@ namespace SysSpy.Desktop.ViewModels
 
             collectorsRegistrar.RegisterElementAndCollector<Certificate>(
                 new CertificatesCollector());
+            collectorsRegistrar.RegisterElementAndCollector<Driver>(
+                new DriversCollector());
+            //collectorsRegistrar.RegisterElementAndCollector<COMPlusComponent>(
+            //new COMPlusComponentsCollector());
+            collectorsRegistrar.RegisterElementAndCollector<EnvironmentVariable>(
+                new EnvironmentVariablesCollector());
+            //collectorsRegistrar.RegisterElementAndCollector<FirewallRule>(
+            //    new FirewallRulesCollector());
+            collectorsRegistrar.RegisterElementAndCollector<ODBC>(
+                new ODBCsCollector());
+            collectorsRegistrar.RegisterElementAndCollector<StartupProgram>(
+                new StartupProgramsCollector());
+            //todo add collector for scheduled tasks
         }
 
         private void InitializeElementsScanningHandlerAndGetTabsViewModels(out ElementsScanningHandler elementsScanningHandler)

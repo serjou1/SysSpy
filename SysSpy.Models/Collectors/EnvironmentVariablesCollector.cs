@@ -1,11 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Collections;
+using SysSpy.Models.Enums;
+using SysSpy.Models.Interfaces;
+using SysSpy.Models.SystemElements;
 
 namespace SysSpy.Models.Collectors
 {
-    class EnvironmentVariablesCollector
+    public class EnvironmentVariablesCollector : ISystemElementsCollector
     {
+        public SystemElementsCollection Collect()
+        {
+            var collection = new SystemElementsCollection();
+
+            foreach (DictionaryEntry de in Environment.GetEnvironmentVariables(EnvironmentVariableTarget.User))
+                collection.Add(new EnvironmentVariable(de.Key.ToString(), de.Value.ToString()) { Hive = Hive.Users });
+
+            foreach (DictionaryEntry de in Environment.GetEnvironmentVariables(EnvironmentVariableTarget.Machine))
+                collection.Add(new EnvironmentVariable(de.Key.ToString(), de.Value.ToString()) { Hive = Hive.Machines });
+
+            return collection;
+        }
     }
 }

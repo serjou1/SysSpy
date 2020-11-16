@@ -33,7 +33,7 @@ namespace SysSpy.Snapshots
 
         public ISystemElementsCollector GetCollector(Type t)
         {
-            return (ISystemElementsCollector)_typesAndCollectors[t];
+            return _typesAndCollectors[t];
         }
     }
 }

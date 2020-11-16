@@ -1,21 +1,24 @@
-﻿using System.Management;
+﻿using SysSpy.Models.Attributes;
 
 namespace SysSpy.Models.SystemElements
 {
     /// <summary>
     /// Describes driver.
     /// </summary>
+    [CollectionName("Drivers")]
     public class Driver : SystemElement
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Driver"/> class.
         /// </summary>
-        /// <param name="driver">Driver as <see cref="ManagementObject"/>.</param>
-        public Driver(ManagementObject driver)
+        /// <param name="displayName">Display Name of the driver.</param>
+        /// <param name="name">Name of the driver.</param>
+        /// <param name="state">State of the driver.</param>
+        public Driver(string displayName, string name, string state)
         {
-            DisplayName = driver["DisplayName"].ToString();
-            Name = driver["Name"].ToString();
-            State = driver["State"].ToString();
+            DisplayName = displayName;
+            Name = name;
+            State = state;
         }
 
         /// <summary>

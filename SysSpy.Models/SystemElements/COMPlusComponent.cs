@@ -1,8 +1,11 @@
-﻿namespace SysSpy.Models.SystemElements
+﻿using SysSpy.Models.Attributes;
+
+namespace SysSpy.Models.SystemElements
 {
     /// <summary>
     /// Describes COM+ component.
     /// </summary>
+    [CollectionName("COM+ Components")]
     public class COMPlusComponent : SystemElement
     {
         /// <summary>

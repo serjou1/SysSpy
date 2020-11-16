@@ -31,6 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Interop.COMAdmin">
+      <HintPath>..\..\..\work pc\apptimized\source\repos\All\All\obj\x64\Debug\Interop.COMAdmin.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.NetFwTypeLib">
+      <HintPath>..\..\..\work pc\apptimized\Desktop\tool\WindowsFormsApplication1\WindowsFormsApplication1\obj\x64\Release\Interop.NetFwTypeLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
@@ -40,6 +48,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\CollectionNameAttribute.cs" />
+    <Compile Include="Collectors\COMPlusComponentsCollector.cs" />
+    <Compile Include="Collectors\DriversCollector.cs" />
+    <Compile Include="Collectors\EnvironmentVariablesCollector.cs" />
+    <Compile Include="Collectors\FirewallRulesCollector.cs" />
+    <Compile Include="Collectors\ODBCsCollector.cs" />
+    <Compile Include="Collectors\ServicesCollector.cs" />
+    <Compile Include="Collectors\StartupProgramsCollector.cs" />
     <Compile Include="Enums\CertificateRoot.cs" />
     <Compile Include="Enums\Hive.cs" />
     <Compile Include="Collectors\CertificatesCollector.cs" />
@@ -49,6 +64,11 @@
     <Compile Include="SystemElements\Certificate.cs" />
     <Compile Include="SystemElements\COMPlusComponent.cs" />
     <Compile Include="SystemElements\Driver.cs" />
+    <Compile Include="SystemElements\EnvironmentVariable.cs" />
+    <Compile Include="SystemElements\FirewallRule.cs" />
+    <Compile Include="SystemElements\ODBC.cs" />
+    <Compile Include="SystemElements\Service.cs" />
+    <Compile Include="SystemElements\StartupProgram.cs" />
     <Compile Include="SystemElements\SystemElement.cs" />
   </ItemGroup>
   <ItemGroup>
