@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
 using SysSpy.Models.SystemElements;
 using SysSpy.Scanning;
 
 namespace SysSpy.Desktop.ViewModels
 {
     // todo add comments
+    // todo add hive separation
+    // todo add added/removed select
     internal class ElementsInfoViewModel : INotifyPropertyChanged
     {
         private readonly ElementScaner _elementScaner;
