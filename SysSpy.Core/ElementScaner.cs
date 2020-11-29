@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SysSpy.Core
 {
-    public class Class1
+    class ElementScaner
     {
     }
 }

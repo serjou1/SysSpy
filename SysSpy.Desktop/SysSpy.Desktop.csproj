@@ -43,11 +43,50 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WPFToolkit">
+      <HintPath>C:\Users\sergn\Downloads\wpf\sourceCode\sourceCode\Toolkit-release\bin\Release\WPFToolkit.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls\ElementsInfoTabItemContent.xaml.cs">
+      <DependentUpon>ElementsInfoTabItemContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ElementsInfoTabItemHeader.xaml.cs">
+      <DependentUpon>ElementsInfoTabItemHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ScanningControlElements.xaml.cs">
+      <DependentUpon>ScanningControlElements.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SysSpyDataGrid.cs" />
+    <Compile Include="Controls\TakeSnapshotElements.xaml.cs">
+      <DependentUpon>TakeSnapshotElements.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\BoolToButtonImageConverter.cs" />
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="RelayCommand.cs" />
+    <Compile Include="ViewModels\ElementsInfoViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\ScanningControlViewModel.cs" />
+    <Page Include="Controls\ElementsInfoTabItemContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ElementsInfoTabItemHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ScanningControlElements.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TakeSnapshotElements.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -60,6 +99,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Styles\Button.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Ellipse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Separator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\UserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -83,6 +138,24 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SysSpy.Models\SysSpy.Models.csproj">
+      <Project>{8B64866A-3890-4D37-BFAD-67054BBD1342}</Project>
+      <Name>SysSpy.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SysSpy.Scanning\SysSpy.Scanning.csproj">
+      <Project>{91CBC913-DBAC-47B4-8D2C-08054BB3E1B9}</Project>
+      <Name>SysSpy.Scanning</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SysSpy.Snapshots\SysSpy.Snapshots.csproj">
+      <Project>{05FA21CC-1F82-4979-8161-1CA9B8B909AE}</Project>
+      <Name>SysSpy.Snapshots</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Pause.png" />
+    <Resource Include="Images\Play.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

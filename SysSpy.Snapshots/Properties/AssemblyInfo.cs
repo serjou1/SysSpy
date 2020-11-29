@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SysSpy.Core")]
+[assembly: AssemblyTitle("SysSpy.Snapshots")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SysSpy.Core")]
+[assembly: AssemblyProduct("SysSpy.Snapshots")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("67b37b01-e38e-456a-920d-51a0cc25c5c4")]
+[assembly: Guid("05fa21cc-1f82-4979-8161-1ca9b8b909ae")]
 
 // Version information for an assembly consists of the following four values:
 //

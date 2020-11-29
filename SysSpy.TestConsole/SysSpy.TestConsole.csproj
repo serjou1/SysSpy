@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{67B37B01-E38E-456A-920D-51A0CC25C5C4}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SysSpy.Core</RootNamespace>
-    <AssemblyName>SysSpy.Core</AssemblyName>
+    <ProjectGuid>{7A0952D3-675C-43F3-811C-97CB0F8F7530}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SysSpy.TestConsole</RootNamespace>
+    <AssemblyName>SysSpy.TestConsole</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -39,18 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Scanner.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SysSpy.Models\SysSpy.Models.csproj">
-      <Project>{8B64866A-3890-4D37-BFAD-67054BBD1342}</Project>
-      <Name>SysSpy.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SysSpy.Snapshots\SysSpy.Snapshots.csproj">
-      <Project>{05FA21CC-1F82-4979-8161-1CA9B8B909AE}</Project>
-      <Name>SysSpy.Snapshots</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

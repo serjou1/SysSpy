@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{67B37B01-E38E-456A-920D-51A0CC25C5C4}</ProjectGuid>
+    <ProjectGuid>{05FA21CC-1F82-4979-8161-1CA9B8B909AE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SysSpy.Core</RootNamespace>
-    <AssemblyName>SysSpy.Core</AssemblyName>
+    <RootNamespace>SysSpy.Snapshots</RootNamespace>
+    <AssemblyName>SysSpy.Snapshots</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -39,17 +39,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Scanner.cs" />
+    <Compile Include="CollectorsRegistrar.cs" />
+    <Compile Include="Exceptions\CollectorRegistrationException.cs" />
+    <Compile Include="Snapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SnapshotsComparator.cs" />
+    <Compile Include="SnapshotsFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SysSpy.Models\SysSpy.Models.csproj">
-      <Project>{8B64866A-3890-4D37-BFAD-67054BBD1342}</Project>
+      <Project>{8b64866a-3890-4d37-bfad-67054bbd1342}</Project>
       <Name>SysSpy.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SysSpy.Snapshots\SysSpy.Snapshots.csproj">
-      <Project>{05FA21CC-1F82-4979-8161-1CA9B8B909AE}</Project>
-      <Name>SysSpy.Snapshots</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
